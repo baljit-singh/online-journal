@@ -1,0 +1,40 @@
+.bgPic {
+  background: url("diary.jpg");
+  background-size: cover;
+  width: 100%;
+  position: absolute;
+}
+.bgPic .layer {
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hStyle {
+  margin-top: 270px;
+  color: white;
+  font-family: Brush Script MT;
+  font-size: 370%;
+  text-align: center;
+}
+
+.pStyle {
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+}
+
+.wrapper {
+  height: 130px;
+  width: 500px;
+  background-color: white;
+  margin-top: 150px;
+  text-align: center;
+}
+.wrapper .fheadStyle {
+  padding: 2px 0px 0px 5px;
+}
+
+/*# sourceMappingURL=style.css.map */
