@@ -1,11 +1,13 @@
 .bgPic {
   background: url("diary.jpg");
   background-size: cover;
+  background-position: center;
+  height: 100%;
   width: 100%;
-  position: absolute;
 }
 .bgPic .layer {
   background: rgba(0, 0, 0, 0.4);
+  height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
@@ -26,15 +28,27 @@
   text-align: center;
 }
 
-.wrapper {
-  height: 130px;
-  width: 500px;
-  background-color: white;
-  margin-top: 150px;
-  text-align: center;
+.formWrapper {
+  height: 410px;
+  width: 90%;
+  background-color: #FEFEFE;
+  margin-top: 90px;
+  margin-bottom: 30px;
 }
-.wrapper .fheadStyle {
-  padding: 2px 0px 0px 5px;
+.formWrapper .formTop {
+  height: 100px;
+  width: 100%;
+  background-color: #FEFEFE;
+  border-bottom: 1px solid black;
+  font-family: "Roboto", sans-serif;
+}
+.formWrapper .formTop .style1 {
+  color: #858585;
+  padding: 23px 0px 0px 23px;
+}
+.formWrapper .formTop .style2 {
+  color: #858585;
+  padding: 2px 0px 0px 23px;
 }
 
 /*# sourceMappingURL=style.css.map */

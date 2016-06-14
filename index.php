@@ -15,23 +15,26 @@
       <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<div class="container-fluid bgPic">
-  <div class="layer">
-  </div>
-</div>
-<div class="container">
-  <div class="row">
-      <div class="col-md-6">
+<div class="contentContainer bgPic">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7">
         <h1 class="hStyle">ONLINE JOURNAL</h1>
         <p class="pStyle">"A good journal entry- like a good song, or sketch, or photograph- ought to break up the habitual and life away the film that forms over the eye, the finger, the tongue, the heart. A good journal entry ought to be a love letter to the world."</p>
       </div>
-      <div class="col-md-6">
-        <div class="wrapper">
-          <h2 class=fheadStyle>Sign up now</h2>
+      <div class="col-sm-5">
+        <div class="formWrapper">
+          <div class="formTop">
+            <h3 class="style1">Sign up now</h3>
+            <p class="style2">Fill in the form below to get instant access:</p>
+          </div>
+          
+          <!-- <div class="wHeader"></div> -->
         </div>
       </div>
+    </div>
   </div>
-</div>
+</div> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
