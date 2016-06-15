@@ -7,25 +7,39 @@
 }
 .bgPic .layer {
   background: rgba(0, 0, 0, 0.4);
-  height: 100%;
   width: 100%;
-  position: absolute;
   top: 0;
   left: 0;
 }
 
-.hStyle {
-  margin-top: 270px;
-  color: white;
-  font-family: Brush Script MT;
-  font-size: 370%;
+.alignLeftdiv {
   text-align: center;
 }
-
-.pStyle {
-  margin-top: 20px;
+.alignLeftdiv .hStyle {
+  margin-top: 270px;
   color: white;
-  text-align: center;
+  font-family: courier new;
+  font-size: 370%;
+}
+.alignLeftdiv .pStyle {
+  margin-top: 20px;
+  color: #BFBFBF;
+  font-family: papyrus;
+  font-size: 120%;
+}
+.alignLeftdiv .uLogin {
+  font-size: 90%;
+  color: #BFBFBF;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.alignLeftdiv .btn {
+  height: 50px;
+  background-color: #009198;
+  color: white;
+  font-family: candara;
+  width: 100px;
+  margin-top: 5px;
 }
 
 .formWrapper {
@@ -33,22 +47,57 @@
   width: 90%;
   background-color: #FEFEFE;
   margin-top: 90px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 .formWrapper .formTop {
   height: 100px;
   width: 100%;
   background-color: #FEFEFE;
-  border-bottom: 1px solid black;
-  font-family: "Roboto", sans-serif;
+  text-align: left;
+  overflow: hidden;
+  padding: 0 25px 15px 25px;
 }
-.formWrapper .formTop .style1 {
-  color: #858585;
-  padding: 23px 0px 0px 23px;
+.formWrapper .formTop .formTopleft {
+  height: 100px;
+  width: 75%;
+  background-color: #FEFEFE;
+  float: left;
 }
-.formWrapper .formTop .style2 {
+.formWrapper .formTop .formTopleft .style1 {
   color: #858585;
-  padding: 2px 0px 0px 23px;
+  font-family: century gothic;
+}
+.formWrapper .formTop .formTopleft .style2 {
+  color: #858585;
+  font-family: Calibri;
+}
+.formWrapper .formTop .formTopright {
+  height: 100px;
+  width: 25%;
+  background-color: #FEFEFE;
+  float: left;
+  text-align: right;
+  padding: 20px 15px 0px 5px;
+}
+.formWrapper .formTop .formTopright .logo {
+  color: #EDEDED;
+  font-size: 330%;
+}
+.formWrapper .formBottom {
+  padding: 20px 25px 30px 25px;
+  background: #eee;
+  text-align: left;
+  border-top: 1px solid #C5C5C5;
+}
+.formWrapper .formBottom .formStyle {
+  height: 50px;
+}
+.formWrapper .formBottom .btn {
+  height: 50px;
+  background-color: #009198;
+  color: white;
+  font-family: candara;
+  width: 130px;
 }
 
 /*# sourceMappingURL=style.css.map */
