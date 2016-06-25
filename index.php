@@ -1,3 +1,9 @@
+<?php
+  include("diaryloginscript.php");
+
+?>
+
+
 <!doctype html>
 <html>
 <head>
@@ -45,14 +51,15 @@
               <div class="form-group">
                 <label for="email"></label>
                 <input type="email" name="email" class="form-control formStyle"
-                placeholder="Email..." />
+                placeholder="Email..." value = "<?php echo addslashes($_POST['email']);?>" />
               </div>
               <div class="form-group">
                 <label for="password"></label>
                 <input type="password" name="password" class="form-control formStyle"
-                placeholder="Password..." />
+                placeholder="Password..." value= "<?php echo addslashes($_POST['password']);?>" />
               </div>
-              <button type="submit" class="btn">Sign me up!</button>
+              <!-- <button type="submit" class="btn">Sign me up!</button> -->
+              <input type="submit" name="submit" value="sign up" />
             </form>
           </div>
           
