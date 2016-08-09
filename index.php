@@ -1,77 +1,93 @@
 <?php
-  include("diaryloginscript.php");
+  include("login.php");
 
 ?>
 
-
-<!doctype html>
-<html>
-<head>
-
-  <meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Online Journal</title>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-      <link href="css/style.css" rel="stylesheet">
-</head>
-<body>
-<div class="contentContainer bgPic">
-<div class="layer">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-7 alignLeftdiv">
-        <h1 class="hStyle">Online Journal</h1>
-        <p class="pStyle">"A good journal entry- like a good song, or sketch, or photograph- ought to break up the habitual and life away the film that forms over the eye, the finger, the tongue, the heart. A good journal entry ought to be a love letter to the world."</p>
-        <p class="uLogin">Already a member?</p>
-        <button type="submit" class="btn">Log In!</button>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+<body data-spy="scroll" data-target=".navbar-collapse">
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div class="navbar-brand">Online Journal</div>
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
       </div>
-      <div class="col-sm-5 alignRightdiv">
-        <div class="formWrapper">
-          <div class="formTop">
-            <div class="formTopleft">
-              <h3 class="style1">Sign up now</h3>
-              <p class="style2">Fill in the form below to get instant access:</p>
-            </div>
-            <div class="formTopright">
-              <span class="glyphicon glyphicon-pencil logo"></span>
-            </div>
+      <div class="collapse navbar-collapse">
+        <form method="POST" class="navbar-form navbar-right">
+          <div class="form-group">
+            <input type="email" name="loginemail" id="loginemail" value="<?php echo addslashes($_POST['email']); ?>" placeholder="email" class="form-control" />
+            <input type="password" name="loginpassword" value="<?php echo addslashes($_POST['password']); ?>" placeholder="password" class="form-control" />
+            <input class="btn btn-primary" type="submit" name="submit" value="Log In"/>
+            <!-- <button class="btn btn-primary">Log In</button> -->
           </div>
-          <div class="formBottom">
-            <form>
-              <div class="form-group">
-                <label for="name"></label>
-                <input type="text" name="name" class="form-control formStyle" placeholder="Name..." />
-              </div>
-              <div class="form-group">
-                <label for="email"></label>
-                <input type="email" name="email" class="form-control formStyle"
-                placeholder="Email..." value = "<?php echo addslashes($_POST['email']);?>" />
-              </div>
-              <div class="form-group">
-                <label for="password"></label>
-                <input type="password" name="password" class="form-control formStyle"
-                placeholder="Password..." value= "<?php echo addslashes($_POST['password']);?>" />
-              </div>
-              <!-- <button type="submit" class="btn">Sign me up!</button> -->
-              <input type="submit" name="submit" value="sign up" />
-            </form>
-          </div>
-          
-          <!-- <div class="wHeader"></div> -->
-        </div>
+        </form>
       </div>
     </div>
   </div>
-</div></div> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <div class="container-fluid contentContainer" id="bgImg">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <p class="firstQuote fontStyle">“Get a notebook…a journal that will last through all time, and maybe the angels may quote from it for eternity. Begin today and write in it your goings and comings, your deepest thoughts, your achievements and your failures, your associations and your triumphs, your impressions and your testimonies” ― Spencer W.Kimball</p>
+          <p class="quotes fontStyle">“A personal journal is an ideal environment in which to “become”. It is a perfect place for you to think, feel, discover, expand, remember, and dream.” ― Brad Wilcox</p>
+          <p class="quotes fontStyle">“Journaling has become one of the most gratifying and fulfilling practices of my life. Not only do I derive the daily benefits of consciously directing my thoughts and putting them in writing, but even more powerful are those I have gained from reviewing my journals.” ― Hal Elrod</p>
+        </div>
+        <div class="col-sm-6">
+          <h1 class="headingStyle center">ONLINE JOURNAL</h1>
+          <p class="center">Your own personal journal, with you wherever you go.</p>
+          <?php
+
+          	if($error){
+          		echo '<div class="alert alert-danger center">'.addslashes($error).'</div>';
+          	}
+
+          	if($message){
+          		echo '<div class="alert alert-success center">'.addslashes($message).'</div>';
+          	}
+
+          ?>
+          <p class="center message"><strong>Interested? Sign Up Below!</strong></p>
+          <form method="POST" class="center">
+            <div class="form-group">
+              <label for="email"></label>
+              <input type="email" name="email" id="email" value="<?php echo addslashes($_POST['email']); ?>" class="form-control" placeholder="Email..." />
+            </div>
+            <div class="form-group">
+              <label for="password"></label>
+              <input type="password" name="password" value="<?php echo addslashes($_POST['password']); ?>" class="form-control" placeholder="Password..." />
+            </div>
+            <input class="btn btn-success" type="submit" name="submit" value="Sign Up" />
+          </form>
+        </div>
+        <div class="col-sm-3">
+          <p class="firstQuote fontStyle">“Journal writing … [provides] a place for self-expression where one can afford to take a risk, experiment with ideas and materials, and even make a mistake” ― M.Joan Lickteig</p>
+          <p class="quotes fontStyle">“Sacred experiences gain validity by being recorded…and seen over a period of years, a life recorded day by day and page by page assumes pattern and purpose. A journal thus becomes a vehicle for seeing God’s interaction with us.” ― Janet Brigham</p>
+          <p class="quotes fontStyle">“The act of writing is the act of discovering what you believe.” ― David Hare</p>
+          <p class="quotes fontStyle">“Write what disturbs you, what you fear, what you have not been willing to speak about. Be willing to be split open.” ―Natalie Goldberg</p>
+        </div>
+      </div>
+    </div>  
+  </div>
+  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
-<script src="js/functions.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  <script>
+      $("#bgImg").css("min-height",$(window).height());
+  </script>
 </body>
-</html>  
+</html>
+

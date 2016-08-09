@@ -1,0 +1,99 @@
+.bgPic {
+  background: url("diary1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+.bgPic .layer {
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.alignLeftdiv {
+  text-align: center;
+}
+.alignLeftdiv .error {
+  margin-top: 270px;
+}
+.alignLeftdiv .hStyle {
+  color: white;
+  font-family: courier new;
+  font-size: 370%;
+}
+.alignLeftdiv .pStyle {
+  margin-top: 20px;
+  color: #BFBFBF;
+  font-family: papyrus;
+  font-size: 120%;
+}
+.alignLeftdiv .btn {
+  height: 50px;
+  background-color: #009198;
+  color: white;
+  font-family: candara;
+  width: 100px;
+  margin-top: 5px;
+}
+
+.formWrapper {
+  height: 410px;
+  width: 90%;
+  background-color: #FEFEFE;
+  margin-top: 60px;
+  margin-bottom: 140px;
+}
+.formWrapper .formTop {
+  height: 100px;
+  width: 100%;
+  background-color: #FEFEFE;
+  text-align: left;
+  overflow: hidden;
+  padding: 0 25px 15px 25px;
+}
+.formWrapper .formTop .formTopleft {
+  height: 100px;
+  width: 75%;
+  background-color: #FEFEFE;
+  float: left;
+}
+.formWrapper .formTop .formTopleft .style1 {
+  color: #858585;
+  font-family: century gothic;
+}
+.formWrapper .formTop .formTopleft .style2 {
+  color: #858585;
+  font-family: Calibri;
+}
+.formWrapper .formTop .formTopright {
+  height: 100px;
+  width: 25%;
+  background-color: #FEFEFE;
+  float: left;
+  text-align: right;
+  padding: 20px 15px 0px 5px;
+}
+.formWrapper .formTop .formTopright .logo {
+  color: #EDEDED;
+  font-size: 330%;
+}
+.formWrapper .formBottom {
+  padding: 20px 25px 20px 25px;
+  background: #eee;
+  text-align: left;
+  border-top: 1px solid #C5C5C5;
+}
+.formWrapper .formBottom .formStyle {
+  height: 50px;
+}
+.formWrapper .formBottom .btn {
+  height: 50px;
+  background-color: #009198;
+  color: white;
+  font-family: candara;
+  width: 130px;
+}
+
+/*# sourceMappingURL=mainstyle.css.map */
